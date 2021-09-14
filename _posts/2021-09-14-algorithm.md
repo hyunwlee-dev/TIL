@@ -5,4 +5,4 @@ author: "HyunWoo LEE"
 tags: ["jekyll", "configuration", "docs", "example"]
 ---
 
-나는요 오빠가 좋은걸~
+![센서](https://github.com/hyunwlee-dev/TIL/blob/main/images/2212센서.png)
