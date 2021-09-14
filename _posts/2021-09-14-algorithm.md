@@ -6,7 +6,7 @@ tags: ["jekyll", "configuration", "docs", "example"]
 ---
 
 1  
-![](/images/boj2212sensor.png)  
+![](./images/boj2212sensor.png)  
 
 2  
 ![](images/boj2212sensor.png)  
