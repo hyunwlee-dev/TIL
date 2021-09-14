@@ -5,9 +5,9 @@ url:            https://hyunwlee-dev.github.io/TIL/
 
 # Author
 author:
-  name:         Inela Avdic Hukic
-  email:        inelaah@gmail.com
-  url:          https://inelaah.com
+  name:         HyunWoo LEE 
+  email:        hwlee3928@gmail.com
+  url:          https://hyunwlee-dev.github.io
 
 # Build settings
 markdown:       kramdown
@@ -34,7 +34,5 @@ related_posts_section:
 
 # Links to social media
 social:
-  email: inelaah@gmail.com
-  github: https://github.com/inelaah
-  twitter: https://twitter.com
-  linkedin: https://ba.linkedin.com/in/inela-avdic-hukic-322354131
+  email: hwlee3928@gmail.com
+  github: https://hyunwlee-dev.github.io 
