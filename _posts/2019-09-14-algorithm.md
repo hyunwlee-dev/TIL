@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "백준 중급 알고리즘"
+title: "TIL 백준 중급 알고리즘"
 author: "hyunwlee"
 ---
 
@@ -8,7 +8,7 @@ author: "hyunwlee"
 
 > Category
 
-백준, [센서][https://www.acmicpc.net/problem/2212], 그리디알고리즘, 골드5
+백준, [센서](https://www.acmicpc.net/problem/2212), 그리디알고리즘, 골드5
 
 <img src="https://github.com/hyunwlee-dev/TIL/blob/6a77d0123737c627f97865cbd69789e70f7d8528/images/boj2212sensor.png?raw=true" style="zoom:50%;" />  
 
