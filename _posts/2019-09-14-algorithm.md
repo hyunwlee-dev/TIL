@@ -13,26 +13,26 @@ author: "hyunwlee"
 <img src="https://github.com/hyunwlee-dev/TIL/blob/6a77d0123737c627f97865cbd69789e70f7d8528/images/boj2212sensor.png?raw=true" style="zoom:50%;" />  
 
 
+---
 
 > 시간복잡도
 
-2초
+2초  
 
-1<= N <= 10,000
+1<= N <= 10,000  
 
-[처음 풀이] Sort, BackTracking(조합): O (N * (N ^ 2)(Combination) * N) + 심지어 문제를 이해하지도 못함
+[처음 풀이] Sort, BackTracking(조합): O (N * (N ^ 2)(Combination) * N) + 심지어 문제를 이해하지도 못함  
 
-[나중 풀이] Sort, Greedy: O (N * logN): 시간 제한
+[나중 풀이] Sort, Greedy: O (N * logN)  
 
-
+---
 
 > 풀이
 
-문제를 이해하기 어려웠고, 실제로 문제를 잘못 이해해서 BruteForce로 풀이를 시작했다.
+문제를 이해하기 어려웠고, 실제로 문제를 잘못 이해해서 BruteForce로 풀이를 시작했다.  
 
 
-
-`처음`에는 집중국을 좌표 위치에 1 ~ K개를 조합(Combination)으로 가능한 위치 모든 경우를 찾아 집중국과 센서 거리의 합의 최소값을 찾아냈다. (⭐️ <strong>문제도 제대로 이해하지 않고, 시간 복잡도 생각을 하지 않고 푼 대참사</strong>) (모든 걸 Brute Force로 풀려 하지마...)
+`처음`에는 집중국을 좌표 위치에 1 ~ K개를 조합(Combination)으로 가능한 위치 모든 경우를 찾아 집중국과 센서 거리의 합의 최소값을 찾아냈다. (⭐️ <strong>문제도 제대로 이해하지 않고, 시간 복잡도 생각을 하지 않고 푼 대참사</strong>) (모든 걸 Brute Force로 풀려 하지마...)  
 
 ```java
 import java.io.BufferedReader;
@@ -109,6 +109,7 @@ public class 센서 {
 }
 ```
 
+---
 
 
 `나중` 에는 그리디로 <strong>O(nlogn)</strong>만에 가능하다는 것을 알게되어 어떻게 풀었는지 설명해보겠다.
