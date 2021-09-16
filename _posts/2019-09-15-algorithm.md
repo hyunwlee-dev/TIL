@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "TIL java basic && 백준 중급 알고리즘"
+title: "TIL java basic, 백준 중급 알고리즘"
 author: "hyunwlee"
 ---
 
