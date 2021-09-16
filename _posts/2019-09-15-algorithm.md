@@ -72,13 +72,11 @@ public class Main {
 }
 ```
 
-에러메세지: <span style="color:red">Exception in thread "main" [java.lang.ClassCastException](https://docs.oracle.com/javase/9/docs/api/java/lang/ClassCastException.html): Main$Edge cannot be cast to java.lang.Comparable</span>
-
-<span style="color:red">at PriorityQueue.siftUpComparable()</span>
-
-<span style="color:red">at PriorityQueue.siftUp()</span>
-
-<span style="color:red">at PriorityQueue.offer()</span>
+에러메세지:  
+<span style="color:red">Exception in thread "main" [java.lang.ClassCastException](https://docs.oracle.com/javase/9/docs/api/java/lang/ClassCastException.html): Main$Edge cannot be cast to java.lang.Comparable</span>  
+<span style="color:red">at PriorityQueue.siftUpComparable()</span>  
+<span style="color:red">at PriorityQueue.siftUp()</span>  
+<span style="color:red">at PriorityQueue.offer()</span>  
 
 ```java
 public boolean offer(E e) {
@@ -167,9 +165,6 @@ public class Main {
 ```
 
 ---
-
-
-
 ## 2. BOJ 1916 최소비용 구하기
 
 > Category
