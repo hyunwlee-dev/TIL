@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "TIL 백준 중급 알고리즘, 42seoul_push_swap"
+title: "TIL 백준 중급 알고리즘"
 author: "hyunwlee"
 ---
 
