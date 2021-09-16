@@ -191,7 +191,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
-public class Main {
+public class 최소비용 구하기 {
     static class Node implements Comparable<Node>
     {
         int end;
