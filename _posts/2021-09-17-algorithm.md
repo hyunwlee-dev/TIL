@@ -25,7 +25,6 @@ author: "hyunwlee"
 BruteFoce  
 
 1. HashSet - 중복 알파벳을 방지하기 위해 사용
-
 2. HashMap - 알파벳의 value를 매핑
 3. BackTracking을 이용한 조합(Combination)을 이용하여 각 알파벳의 모든 경우수를 구한 후 최대로 큰 값을 출력
 
@@ -63,11 +62,11 @@ public class 단어 수학 {
         }
         arr = new int[set.size()];
         check = new boolean[11];
-        DFS(0, map, wordGrade, list);
+        dfs(0, map, wordGrade, list);
         System.out.println(answer);
     }
 
-    public static void DFS(int depth, Map<Integer, Character> map, Map<Character, Integer> wordGrade, List<String> list)
+    public static void dfs(int depth, Map<Integer, Character> map, Map<Character, Integer> wordGrade, List<String> list)
     {
         if (depth == arr.length)
         {
@@ -91,7 +90,7 @@ public class 단어 수학 {
                 continue;
             check[i] = true;
             arr[depth] = i;
-            DFS(depth + 1, map, wordGrade, list);
+            dfs(depth + 1, map, wordGrade, list);
             check[i] = false;
         }
     }
