@@ -28,7 +28,7 @@ BruteFoce
 2. HashMap - 알파벳의 value를 매핑
 3. BackTracking을 이용한 조합(Combination)을 이용하여 각 알파벳의 모든 경우수를 구한 후 최대로 큰 값을 출력
 
-```markdown
+```java
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -65,7 +65,6 @@ public class 단어 수학 {
         dfs(0, map, wordGrade, list);
         System.out.println(answer);
     }
-
     public static void dfs(int depth, Map<Integer, Character> map, Map<Character, Integer> wordGrade, List<String> list)
     {
         if (depth == arr.length)
@@ -109,31 +108,21 @@ input으로 들어오는 단어의 알파벳을 각 자리 수의 위치마다 1
 만약 10개 이하 조건이 없다면, 단어가 11개 들어올 수 있는 상황이 된다면, 
 
 B C A (letter 1)
-
-​	   A (2)
-
-​       A (3)
-
-​       A (4)
-
-​       A (5)
-
-​       A (6)
-
-​       A (7)
-
-​       A (8)
-
-​       A (9)
-
-​       A (10)
-
-​       A (11)
+A (2)
+​A (3)
+​A (4)
+​A (5)
+​A (6)
+​A (7)
+​A (8)
+​A (9)
+​A (10)
+​A (11)
 
 이러한 경우에는 A의 grade > C의 grade이 이득을 본다. 하지만, 10개 이하이기 때문에 이러한 그리디 방법이 통할 수 있다.
 
 
-```markdown
+```java
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
