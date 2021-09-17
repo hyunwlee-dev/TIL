@@ -101,7 +101,7 @@ public class 단어 수학 {
 ---
 Greedy  
 
-input으로 들어오는 단어의 알파벳을 각 자리 수의 위치마다 1로 나타내어 Mapping후 PriorityQueue에 넣어 꺼내어 Mapping만 해주면 간단하게 해결이 되는 문제다.
+input으로 들어오는 단어의 알파벳을 각 자리 수의 위치마다 1로 나타내어 Mapping후 최대힙 PriorityQueue에 넣고 꺼내어 Mapping만 해주면 간단하게 해결이 되는 문제다.
 
 예외를 있으리라 생각되어 안될 것 같았지만 <span style="color:red">들어오는 단어가 10개 이하이기 때문에 이 방법이 가능할 것이라 생각 되었다.</span>
 
