@@ -141,15 +141,15 @@ public class 단어 수학 {
         @Override
         public int compareTo(Words w)
         {
-            return -(this.value - w.value);
+            return -(this.value - w.value); // 내림 차순
         }
     }
     public static void main(String[] args) throws IOException {
       BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
       int n = Integer.parseInt(br.readLine());
-      Map<Character, Integer> charValueMap = new HashMap<>();
-      PriorityQueue<Words> pq = new PriorityQueue<>();
-      Map<Character, Integer> charGradeMap = new HashMap<>();
+      Map<Character, Integer> charValueMap = new HashMap<>(); // ex) letter = ABAC 일 경우, [{'A', 1010}, {'B', 100}, {'C', 1}]
+      PriorityQueue<Words> pq = new PriorityQueue<>();        // charValueMap의 value가 큰 순으로
+      Map<Character, Integer> charGradeMap = new HashMap<>(); // charValueMap의 value가 클수록 높은 grade [{'A', 9}, {'B', 8}, {'C', 7}]
       List<String> wordList = new ArrayList<>();
       for (int i = 0; i < n; i++)
       {
