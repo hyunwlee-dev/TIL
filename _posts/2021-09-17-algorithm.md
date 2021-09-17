@@ -16,8 +16,7 @@ author: "hyunwlee"
 
 > 시간복잡도
 
-1. BruteForce: O(N(단어의 개수 1 <= N <= 10) ^ 2 * M(알파벳 개수 1 <=M <= 26)) => 통과는 하지만 효율성↓
-
+1. BruteForce: O(N(단어의 개수 1 <= N <= 10)! * M(알파벳 개수 1 <=M <= 26)) => 통과는 하지만 효율성↓  
 2. <span style="color:red">Greedy: O(N ^ 2)</span>
 
 > 풀이
@@ -26,7 +25,7 @@ BruteFoce
 
 1. HashSet - 중복 알파벳을 방지하기 위해 사용
 2. HashMap - 알파벳의 value를 매핑
-3. BackTracking을 이용한 조합(Combination)을 이용하여 각 알파벳의 모든 경우수를 구한 후 최대로 큰 값을 출력
+3. BackTracking을 이용한 순열(Permutation)을 이용하여 각 알파벳의 모든 경우 수를 구한 후 최대로 큰 값을 출력
 
 ```java
 import java.io.BufferedReader;
@@ -65,6 +64,7 @@ public class 단어 수학 {
         dfs(0, map, wordGrade, list);
         System.out.println(answer);
     }
+    // BackTracking을 이용한 순열(Permutaion)
     public static void dfs(int depth, Map<Integer, Character> map, Map<Character, Integer> wordGrade, List<String> list)
     {
         if (depth == arr.length)
@@ -95,8 +95,7 @@ public class 단어 수학 {
     }
 }
 ```
-
-별로다.. 더 효율적인 방법 있다!
+별로다.. 더 효율적인 방법 있을까?
 
 ---
 Greedy  
