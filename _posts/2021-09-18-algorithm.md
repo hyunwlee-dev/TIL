@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "TIL 백준 중급 알고리즘, 42seoul(push_swap)"
+title: "TIL 백준 중급 알고리즘"
 author: "hyunwlee"
 ---
 
-## 1. BOJ 1339 단어 수학
+## 1. <mark>BOJ 1202 보석 도둑</mark>
 
 > Category
 
@@ -83,7 +83,4 @@ public class 보석 도둑
         System.out.println(answer);
     }
 }
-
 ```
-## 2. 42seoul(push_swap)
-
