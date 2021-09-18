@@ -194,30 +194,39 @@ public class 단어 수학 {
 
 ## 2. 42seoul(push_swap)
 
-1. 예외 처리
+#### 동료 학습 방법: 개인
 
-1) 음수?? 0??
-2) 중복처리 => Brute Force
+#### 학습 목표: 예외처리
 
-Error 를 출력해야할 경우:
+1. <strong>Error management</strong>
 
-- list of integers 중 한 원소가 integer가 아닐 경우
-- list of integers의 값이 Integer보다 클 경우
-- duplicates가 존재할 경우
-- stdin에서 받은 명령어가 존재하지 않는 명령어일 경우.
+- [x] list of integers 중 한 원소가 integer가 아닐 경우 <span style="color:red">result: Error</span>
+
+2. <strong>Identity test</strong>
+
+- [x] ./push_swap <span style="color:blue">42</span> <span style="color:red">result:</span>
+- [ ] ./push_swap <span style="color:blue">0 1 2 3</span> <span style="color:red">result: </span>
+- [ ] ./push_swap <span style="color:blue">0 1 2 3 4 5 6 7 8 9</span> <span style="color:red">result: </span>
+
+---
+
+Error Management에 적합하기 위해서 헤더에 validation구조체를 선언해주도록 하였다.
+
+- is_digit과 is_integer는 input이 들어오는대로 검출 할 수있어 따로 check_validation함수로 빼놓기로 결정했다.
+
+```c
+typedef struct  s_validation
+{
+    int is_sorted;			// 정렬되어 있는 상태인가?
+    int is_duplicated;	// stack들어 있는 원소가 중복인 상태인가?
+    // int is_digit;				// 원소가 정수인가?
+    // int is_integer;			// 원소 범위가 Integer인가?
+}               t_validation;
+```
+
+
+
+- 환경변수에 랜덤으로 값을 넣어주는 명령어
 
 PUSH_SWAP_ARG=`ruby -e "puts (1..10).to_a.shuffle.join(' ')"`; echo $PUSH_SWAP_ARG
 
-
-1. Memory Leaks
-2. Error management
-   In this section, we'll evaluate the push_swap's error management.
-   If at least one fails, no points will be awarded for this section. Move to the next one.
-
-- Run push_swap with non numeric parameters. The program must display "Error".
-- Run push_swap with a duplicate numeric parameter. The program must display "Error".
-- Run push_swap with only numeric parameters including one greater than MAXINT. The program must display "Error".
-- Run push_swap without any parameters. The program must not display anything and give the prompt back.
-
-non 숫자, 중복 숫자, MAXINT -> ERROR
-non Parameter -> nothing
