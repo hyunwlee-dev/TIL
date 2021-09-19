@@ -108,17 +108,17 @@ public class 보석 도둑
 
 3. ~~<strong>Simple version</strong>~~
 
-- [x] shell ARG="<span style="color:blue">2 1 0</span>"; ./push_swap $ARG | ./checker_Mac $ARG <span style="color:red">result line: 2~3</span>
+- [x] ARG="<span style="color:blue">2 1 0</span>"; ./push_swap $ARG | ./checker_Mac $ARG <span style="color:red">result line: 2~3</span>
 
 4. <strong>Another simple version</strong>
 
-- [ ] shell ARG="<span style="color:blue">1 5 2 4 3</span>"; ./push_swap $ARG | ./checker_Mac $ARG <span style="color:red">result line: ~12</span>
-- [ ] shell ARG="<span style="color:blue">5 random</span>"; ./push_swap $ARG | ./checker_Mac $ARG <span style="color:red">result line: ~12</span> 
+- [ ] ARG="<span style="color:blue">1 5 2 4 3</span>"; ./push_swap $ARG | ./checker_Mac $ARG <span style="color:red">result line: ~12</span>
+- [ ] ARG="<span style="color:blue">5 random</span>"; ./push_swap $ARG | ./checker_Mac $ARG <span style="color:red">result line: ~12</span> 
   - // 검증하기 전에 이 테스트를 여러 순열로 두 번 반복해야 합니다.
 
 5. <strong>Middle version</strong>
 
-- [ ] shell ARG="<span style="color:blue">100 random</span>"; ./push_swap $ARG | ./checker_Mac $ARG 
+- [ ] ARG="<span style="color:blue">100 random</span>"; ./push_swap $ARG | ./checker_Mac $ARG 
 
   <span style="color:red">result line: </span>
 
@@ -131,7 +131,7 @@ public class 보석 도둑
 
 6. <strong>Advannced version</strong>
 
-- [ ] shell ARG="<span style="color:blue">500 random</span>"; ./push_swap $ARG | ./checker_Mac $ARG 
+- [ ] ARG="<span style="color:blue">500 random</span>"; ./push_swap $ARG | ./checker_Mac $ARG 
 
   <span style="color:red">result line: </span>
 
