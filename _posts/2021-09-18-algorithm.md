@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "TIL 백준 중급 알고리즘"
+title: "TIL 백준 중급 알고리즘, 42seoul(push_swap)"
 author: "hyunwlee"
 ---
 
-## 1. <mark>BOJ 1202 보석 도둑</mark>
+## 1. <span style="background-color:lightgrey">BOJ 1202 보석 도둑</span>
 
 > Category
 
@@ -83,4 +83,63 @@ public class 보석 도둑
         System.out.println(answer);
     }
 }
+
 ```
+## 2. <span style="background-color:lightgrey">42seoul(push_swap)</span>
+
+#### 동료 학습 방법: 개인
+
+#### 학습 목표: 예외처리
+
+1. ~~<strong>Error management</strong>~~
+
+- [x] list of integers 중 한 원소가 integer가 아닐 경우 <span style="color:red">result: Error</span>
+- [x] list of integers의 값이 Integer보다 클 경우 <span style="color:red">result: Error</span>
+- [x] duplicates가 존재할 경우 <span style="color:red">result: Error</span>
+- [x] stdin에서 받은 명령어가 존재하지 않는 명령어일 경우 <span style="color:red">nothing</span>
+
+- [x] <span style="background:lightpink">정렬된 상태이면 종료</span>
+
+2. ~~<strong>Identity test</strong>~~
+
+- [x] ./push_swap <span style="color:blue">42</span> <span style="color:red">result:</span>
+- [x] ./push_swap <span style="color:blue">0 1 2 3</span> <span style="color:red">result: </span>
+- [x] ./push_swap <span style="color:blue">0 1 2 3 4 5 6 7 8 9</span> <span style="color:red">result: </span>
+
+3. ~~<strong>Simple version</strong>~~
+
+- [x] ARG="<span style="color:blue">2 1 0</span>"; ./push_swap $ARG | ./checker_Mac $ARG <span style="color:red">result line: 2~3</span>
+
+4. <strong>Another simple version</strong>
+
+- [ ] ARG="<span style="color:blue">1 5 2 4 3</span>"; ./push_swap $ARG | ./checker_Mac $ARG <span style="color:red">result line: ~12</span>
+- [ ] ARG="<span style="color:blue">5 random</span>"; ./push_swap $ARG | ./checker_Mac $ARG <span style="color:red">result line: ~12</span> 
+  - // 검증하기 전에 이 테스트를 여러 순열로 두 번 반복해야 합니다.
+
+5. <strong>Middle version</strong>
+
+- [ ] ARG="<span style="color:blue">100 random</span>"; ./push_swap $ARG | ./checker_Mac $ARG 
+
+  <span style="color:red">result line: </span>
+
+  - [ ] 700 미만: 5점
+
+  - [ ] 900 미만: 4점
+  - [ ] 1100 미만: 3점
+  - [ ] 1300 미만: 2점
+  - [ ] 1500 미만: 1점
+
+6. <strong>Advannced version</strong>
+
+- [ ] ARG="<span style="color:blue">500 random</span>"; ./push_swap $ARG | ./checker_Mac $ARG 
+
+  <span style="color:red">result line: </span>
+
+  - [ ] 5500 미만: 5점
+  - [ ] 7000 미만: 4점
+  - [ ] 8500 미만: 3점
+  - [ ] 10000 미만: 2점
+  - [ ] 11500 미만: 1점
+
+---
+
