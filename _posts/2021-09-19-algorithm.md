@@ -4,7 +4,7 @@ title: "TIL 백준 중급 알고리즘, 42seoul(push_swap)"
 author: "hyunwlee"
 ---
 
-## 1. <mark>BOJ 1043 거짓말</mark>
+## 1. <span style="background-color:lightgrey">BOJ 1043 거짓말</span>
 
 > Category
 
@@ -211,3 +211,133 @@ public class 거짓말
 ```
 
 아직 Union-Find가 어색하여 같은 유형의 많은 문제를 풀어보는 것이 좋을 듯 하다.
+
+---
+
+
+
+## 2. <span style="background-color:lightgrey">42seoul(push_swap)</span>
+
+#### 동료 학습 방법: 개인
+
+#### 학습 목표: 예외처리
+
+1. ~~<strong>Error management</strong>~~
+
+- [x] list of integers 중 한 원소가 integer가 아닐 경우 <span style="color:red">result: Error</span>
+- [x] list of integers의 값이 Integer보다 클 경우 <span style="color:red">result: Error</span>
+- [x] duplicates가 존재할 경우 <span style="color:red">result: Error</span>
+- [x] stdin에서 받은 명령어가 존재하지 않는 명령어일 경우 <span style="color:red">nothing</span>
+
+- [x] <span style="background:lightpink">정렬된 상태이면 종료</span>
+
+2. ~~<strong>Identity test</strong>~~
+
+- [x] ./push_swap <span style="color:blue">42</span> <span style="color:red">result:</span>
+- [x] ./push_swap <span style="color:blue">0 1 2 3</span> <span style="color:red">result: </span>
+- [x] ./push_swap <span style="color:blue">0 1 2 3 4 5 6 7 8 9</span> <span style="color:red">result: </span>
+
+3. ~~<strong>Simple version</strong>~~
+
+- [x] ARG="<span style="color:blue">2 1 0</span>"; ./push_swap $ARG | ./checker_Mac $ARG <span style="color:red">result line: 2~3</span>
+
+4. ~~<strong>Another simple version</strong>~~
+
+- [x] ARG="<span style="color:blue">1 5 2 4 3</span>"; ./push_swap $ARG | ./checker_Mac $ARG <span style="color:red">result line: ~12</span>
+- [x] ARG="<span style="color:blue">5 random</span>"; ./push_swap $ARG | ./checker_Mac $ARG <span style="color:red">result line: ~12</span> 
+  - // 검증하기 전에 이 테스트를 여러 순열로 두 번 반복해야 합니다.
+
+5. <strong>Middle version</strong>
+
+- [ ] ARG="<span style="color:blue">100 random</span>"; ./push_swap $ARG | ./checker_Mac $ARG 
+
+  <span style="color:red">result line: </span>
+
+  - [ ] 700 미만: 5점
+
+  - [ ] 900 미만: 4점
+  - [ ] 1100 미만: 3점
+  - [x] 1300 미만: 2점
+  - [ ] 1500 미만: 1점
+
+6. <strong>Advannced version</strong>
+
+- [ ] ARG="<span style="color:blue">500 random</span>"; ./push_swap $ARG | ./checker_Mac $ARG 
+
+  <span style="color:red">result line: </span>
+
+  - [ ] 5500 미만: 5점
+  - [ ] 7000 미만: 4점
+  - [ ] 8500 미만: 3점
+  - [x] 10000 미만: 2점
+  - [ ] 11500 미만: 1점
+
+---
+
+#### 5개 짜리
+
+- 3개 짜리로 만드는 것이 목표입니다.
+- `for (a 노드 개수) if (a 노드 값 == max || a 노드 값 == min) pa() else ra() 3개짜리 정렬() b stack에서 a stack으로 다시 넘겨주기`
+- => b stack으로 가장 큰수와 가장 작은 수 2개를 넘겨주어서 3개 정렬 후 2개를 다시 넘겨줍니다.
+
+
+
+java로 TC를 구하기 위해서 BackTracking을 이용하여 순열, 그리고 랜덤으로 순열 하나를 출력하는 프로그램
+
+```java
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public class TEST
+{
+    static int[] arr;
+    static boolean[] check;
+    static int cnt = 0;
+    static List<String> list = new ArrayList<>();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+        arr = new int[n];
+        check = new boolean[n + 1];
+        Random r = new Random();
+        DFS(0, n);
+        System.out.println(list.get(r.nextInt(factorial(n))));
+    }
+
+    public static void DFS(int depth, int n)
+    {
+        if (depth == n)
+        {
+            ++cnt;
+            StringBuilder sb = new StringBuilder();
+            for (int i : arr)
+                sb.append(i + " ");
+            list.add(sb.toString());
+            return;
+        }
+
+        for (int i = 1; i <= n; i++)
+        {
+            if (check[i])
+                continue;
+            check[i] = true;
+            arr[depth] = i;
+            DFS(depth + 1, n);
+            check[i] = false;
+        }
+    }
+
+    public static int factorial(int n)
+    {
+        if (n == 1)
+            return (1);
+        return (n * factorial(n - 1));
+    }
+}
+```
+
+checker_Mac 쉘 책점 프로그램
