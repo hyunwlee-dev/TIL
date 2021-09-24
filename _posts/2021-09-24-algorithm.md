@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "42seoul(push_swap)"
+title: "TIL 백준 중급 알고리즘, 42seoul(push_swap)"
 author: "hyunwlee"
 ---
 
-## 1. <span style="background-color:lightgrey">BOJ 1043 거짓말</span>
+## 1. <span style="background-color:lightgrey">BOJ 18116 로봇 조립</span>
 
 > Category
 
-백준, [거짓말](https://www.acmicpc.net/problem/1043), 그래프, 골드4
+백준, [로봇 조립](https://www.acmicpc.net/problem/18116), 그래프
 
 <img src="https://github.com/hyunwlee-dev/TIL/blob/f7238cc11efd5091ab6801cac78ff82c9f255651/images/boj_robotAssembly.png?raw=true" style="zoom:50%;" />  
 
