@@ -228,5 +228,7 @@ typedef struct  s_validation
 
 - 환경변수에 랜덤으로 값을 넣어주는 명령어
 
+```
 ARG=`ruby -e "puts (0..10).to_a.shuffle.join(' ')"`; ./push_swap $ARG
+```
 
