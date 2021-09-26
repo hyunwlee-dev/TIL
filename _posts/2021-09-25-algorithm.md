@@ -88,7 +88,7 @@ __균형트리__: 레드-블랙 트리, AVL 트리
 
 
 
-<img src="https://github.com/hyunwlee-dev/TIL/blob/dcb81b4092c33bc2ca45e315bcc07b4b9fe37bfd/images/tree/tree3.png?raw=true" style="zoom:40%;"/>
+<img src="https://github.com/hyunwlee-dev/TIL/blob/3ad8b5f262c127e10e8fb133fa5ce5936384e552/images/tree/tree3.png?raw=true" style="zoom:40%;"/>
 
 
 
