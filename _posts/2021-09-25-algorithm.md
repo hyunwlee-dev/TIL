@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "TIL java basic"
+title: "TIL java basic Tree"
 author: "hyunwlee"
 ---
 
