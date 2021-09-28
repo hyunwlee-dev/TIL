@@ -21,7 +21,7 @@ __들어가기 앞서__
 1. 자료구조, 추상 데이터 타입 설명
 2. 자료구조 분류, 탄생
 
-3. 자바의 자료구조 어떤식으로 구현되어 있는지 (__ADT__와 __DS__), 직접 구현까지도
+3. 자바의 자료구조 어떤식으로 구현되어 있는지 (__ADT__ 와 __DS__), 직접 구현까지도
 
 
 
@@ -110,7 +110,7 @@ __1. 선형 자료구조(Linear Data Structure)__
 
 흔히 쓰는 int[] 배열 같은것
 
-선형 자료구조는 대표적으로 __List__, __Queue__, __Deque__가 있다.
+선형 자료구조는 대표적으로 __List__, __Queue__,  __Deque__가 있다.
 
 
 
@@ -419,10 +419,6 @@ __Set__
 - TreeSet
 
 <img src="https://github.com/hyunwlee-dev/TIL/blob/4712a79eea7c70e5c0724a46b937ab29bc924608/images/dataStructure/CollectionFlowChart.png?raw=true"/>
-
----
-
-
 
 ---
 
