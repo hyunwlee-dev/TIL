@@ -12,22 +12,19 @@ __들어가기 앞서__
 2. 1번에서 여러 자료구조들을 짤수 있다고 했는데 자바에서 구현된 방식으로 가능하다는 것인가? => X (단순하게 짤 정도..)
 3. 자바를 주언어로 하면서 Collection안을 들여다 본적이 있나? => 없다.
 
-개발자라면 가장 기초가 되어야하는 자료구조를...
-
-
+개발자라면 가장 기초가 되어야하는 자료구조
 
 내가 정리할 부분은 크게 3가지로 나뉠것 같다.
 
 1. 자료구조, 추상 데이터 타입 설명
 2. 자료구조 분류, 탄생
-
 3. 자바의 자료구조 어떤식으로 구현되어 있는지 (<strong>ADT</strong> 와 <strong>DS</strong>), 직접 구현까지도
 
 
 
 ## 1. <span style="background-color:lightsteelblue">자료구조</span>
 
-<span style="background-color:lightgreen"><strong>DS - Data Structure</strong>></span>
+<span style="background-color:lightgreen"><strong>DS - Data Structure</strong></span>
 
 1. 데이터 값의 모임
 2. 데이터 간의 관계
@@ -70,9 +67,9 @@ Linked List로 Stack을 구현한다 했을 때..
 
 ---
 
-<span style="background-color:lightgreen">__DS vs. ADT 실무에서 어떻게 적용될까?__</span>
+<span style="background-color:lightgreen"><strong>DS vs. ADT</strong></span>
 
-예) 자바과목 A학점이상 맞은 학생 관리하는 자료구조? 알파벳 순서로 하고 싶음
+예) 자바과목 A학점이상 맞은 학생 관리하는 자료구조 (알파벳 순서로 하고 싶다)
 
 <strong>ADT</strong>:  Alphabetical Ordered
 
@@ -424,7 +421,11 @@ Set Interface를 상속받은 <strong>SortedSet Interface</strong>를 구현하�
 
 
 
+---
 
+<strong>Reference</strong>
+
+[블로그 st-lab](https://st-lab.tistory.com/142)
 
 
 
