@@ -51,8 +51,6 @@ public void inOder(Node node)
 }
 ```
 
-
-
 2. <span style="background-color:lightgreen">__PreOrder 전위 순회__</span>
 
 Current, Left, Right
@@ -67,8 +65,6 @@ public void preOrder(Node node)
 	preOrder(node.right);
 }
 ```
-
-
 
 3. <span style="background-color:lightgreen">__PostOrder 후위 순회__</span>
 
