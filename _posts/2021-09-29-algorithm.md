@@ -289,7 +289,7 @@ public class ArrayList<E> implements List<E>{
 
 ---
 
-부족한것
+<span style="background-color:#028C6A; color:white"><strong>부족한 것</strong></span>
 
 제네릭스, clone, toArray 얕은복사, 깊은복사, Exception 종류?
 
