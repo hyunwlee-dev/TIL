@@ -4,9 +4,9 @@ title: "TIL 백준 중급 알고리즘"
 author: "hyunwlee"
 ---
 
-## BOJ 2212 센서
+## <span style="background-color:#1D6A96; color:white">BOJ 2212 센서</span>
 
-> Category
+<span style="background-color:#85B8CB; color:white"><strong>Category</strong></span>
 
 백준, [센서](https://www.acmicpc.net/problem/2212), 그리디알고리즘, 골드5
 
@@ -15,7 +15,7 @@ author: "hyunwlee"
 
 ---
 
-> 시간복잡도
+<span style="background-color:#85B8CB; color:white"><strong> 시간복잡도</strong></span>
 
 2초  
 
@@ -27,7 +27,7 @@ author: "hyunwlee"
 
 ---
 
-> 풀이
+<span style="background-color:#85B8CB; color:white"><strong> 풀이 </strong></span>
 
 문제를 이해하기 어려웠고, 실제로 문제를 잘못 이해해서 BruteForce로 풀이를 시작했다.  
 
