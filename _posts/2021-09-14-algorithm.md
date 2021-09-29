@@ -34,7 +34,7 @@ author: "hyunwlee"
 
 `처음`에는 집중국을 좌표 위치에 1 ~ K개를 조합(Combination)으로 가능한 위치 모든 경우를 찾아 집중국과 센서 거리의 합의 최소값을 찾아냈다. (⭐️ <strong>문제도 제대로 이해하지 않고, 시간 복잡도 생각을 하지 않고 푼 대참사</strong>) (모든 걸 Brute Force로 풀려 하지마...)  
 
-```java
+```
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -55,7 +55,7 @@ public class 센서 {
             return;
         }
         StringTokenizer st = new StringTokenizer(br.readLine());
-        // 문제를 잘못이해한 참극 => Set 왜...쓰니?
+        // 문제를 잘못이해한 참극 => Set 사용
         Set<Integer> set = new HashSet<>();
         int max = Integer.MIN_VALUE;
         for (int i = 0; i < N; i++)
@@ -118,7 +118,7 @@ public class 센서 {
 2. 각 센서 거리 차이를 담은 list (오름차순)
 3. list의 0 ~ (n - k)를 합해 출력한다. => 거리가 긴 것은 뛰어 넘을 수 있다.
 
-```java
+```
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
