@@ -4,18 +4,21 @@ title: "TIL java basic, 백준 중급 알고리즘"
 author: "hyunwlee"
 ---
 
-## 1. <span style="background-color:lightsteelblue">Java Tree Traversal (InOrder, PostOrder, PreOrder)</span>
+## <span style="background-color:#028C6A; color:white">Java Tree Traversal (InOrder, PostOrder, PreOrder)</span>
 
 트리를 탐색하는데 효율적으로 하는 3가지 방법에 대해서 알아보자.
 
-- __InOrder 중위__
-- __PreOrder 전위__
-- __PostOrder 후위__
-- <span style="color:gray">레벨 순서 순회</span>
+<span style="background-color:#7BC5AE; color:white"><strong>InOrder 중위 순회</strong></span>
+
+<span style="background-color:#7BC5AE; color:white"><strong>preOrder 전위 순회</strong></span>
+
+<span style="background-color:#7BC5AE; color:white"><strong>postOrder 후위 순회</strong></span>
+
+<span style="background-color:#7BC5AE; color:white"><strong>level 순서 순회</strong></span>
 
 배열이나 연결리스트처럼 선형으로 된 자료구조보다 트리에서 탐색은 많이 까다롭다.
 
-__순회__
+<span style="background-color:#7BC5AE; color:white"><strong> 순회</strong></span>
 
 ```
 for (String s : sList)
@@ -36,7 +39,7 @@ for (String s : sList)
 
 
 
-1. <span style="background-color:lightgreen">__InOrder 중위 순회__</span>
+<span style="background-color:#7BC5AE; color:white"><strong>InOrder 중위 순회</strong></span>
 
 Left, Current, Right
 
@@ -51,7 +54,9 @@ public void inOder(Node node)
 }
 ```
 
-2. <span style="background-color:lightgreen">__PreOrder 전위 순회__</span>
+
+
+<span style="background-color:#7BC5AE; color:white"><strong>preOrder 전위 순회</strong></span>
 
 Current, Left, Right
 
@@ -66,7 +71,9 @@ public void preOrder(Node node)
 }
 ```
 
-3. <span style="background-color:lightgreen">__PostOrder 후위 순회__</span>
+
+
+<span style="background-color:#7BC5AE; color:white"><strong>postOrder 후위 순회</strong></span>
 
 Left, Right, Current
 
@@ -83,7 +90,7 @@ public void postOrder(Node node)
 
 
 
-<span style="background-color:lightgreen">__순회 순서__</span>
+<span style="background-color:#7BC5AE; color:white"><strong>순회 순서</strong></span>
 
 ```
         (1)
@@ -101,9 +108,9 @@ Postorder (Left, Right, Root): 4 5 2 3 1
 
 ---
 
-## 2. <span style="background-color:lightsteelblue">BOJ 2263 트리의 순회</span>
+## <span style="background-color:#1D6A96; color:white">BOJ 2263 트리의 순회</span>
 
-> Category
+<span style="background-color:#85B8CB; color:white"><strong> Category </strong></span>
 
 백준, [트리의 순회](https://www.acmicpc.net/problem/2263), 분할 정복, 골드3
 
@@ -111,10 +118,9 @@ Postorder (Left, Right, Root): 4 5 2 3 1
 
 
 
+<span style="background-color:#85B8CB; color:white"><strong> 풀이 </strong></span>
 
-> 풀이
-
-<span style="background-color:lightgreen">트리 순회</span>에 대한 규칙성을 가지고 <span style="background-color:lightsteelblue">__분할 정복__</span>으로 풀어내는 문제였으며 분할이 되어가는 과정을 직접 그려나가면서 해결하려 했다.
+<strong>트리 순회</strong>에 대한 규칙성을 가지고 <span style="background-color:lightsteelblue">__분할 정복__</span>으로 풀어내는 문제였으며 분할이 되어가는 과정을 직접 그려나가면서 해결하려 했다.
 
 
 
