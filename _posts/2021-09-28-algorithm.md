@@ -4,7 +4,7 @@ title: "TIL java collections framework"
 author: "hyunwlee"
 ---
 
-__들어가기 앞서__
+## <span style="background-color:#028C6A; color:white"><strong>들어가기 앞서</strong></span>
 
 요즘들어 주 언어인 자바로 다양한 알고리즘을 풀어보며 의구심이 들었다.
 
@@ -22,9 +22,9 @@ __들어가기 앞서__
 
 
 
-## 1. <span style="background-color:lightsteelblue">자료구조</span>
+## <span style="background-color:#028C6A; color:white">자료구조</span>
 
-<span style="background-color:lightgreen"><strong>DS - Data Structure</strong></span>
+<span style="background-color:#7BC5AE; color:white"><strong>DS - Data Structure</strong></span>
 
 1. 데이터 값의 모임
 2. 데이터 간의 관계
@@ -38,7 +38,7 @@ __들어가기 앞서__
 
 ---
 
-<span style="background-color:lightgreen">__ADT - abstract data type__</span>
+<span style="background-color:#7BC5AE; color:white"><strong>ADT - abstract data type</strong></span>
 
 1. 자료구조의 특징, 속성, operations 설명
 2. How에 대해서는 다루지 않는다, 구현 X
@@ -67,7 +67,7 @@ Linked List로 Stack을 구현한다 했을 때..
 
 ---
 
-<span style="background-color:lightgreen"><strong>DS vs. ADT</strong></span>
+<span style="background-color:#7BC5AE; color:white"><strong>DS vs. ADT</strong></span>
 
 예) 자바과목 A학점이상 맞은 학생 관리하는 자료구조 (알파벳 순서로 하고 싶다)
 
@@ -85,7 +85,7 @@ operations
 
 ---
 
-<span style="background-color:lightgreen">__Feat. java__</span>
+<span style="background-color:#7BC5AE; color:white"><strong>Feat. java</strong></span>
 
 ```
 Java	// 설계의 관점에서 되게 도움이 될것이다.
@@ -97,9 +97,9 @@ Java	// 설계의 관점에서 되게 도움이 될것이다.
 
 ---
 
-## 2. <span style="background-color:lightsteelblue">자료구조 분류</span>
+## <span style="background-color:#028C6A; color:white">자료구조 분류</span>
 
-<span style="background-color:lightgreen"><strong>분류</strong></span>
+<span style="background-color:#7BC5AE; color:white"><strong>분류</strong></span>
 
 <strong>형태에 따른 자료구조</strong>
 
@@ -129,7 +129,7 @@ Java	// 설계의 관점에서 되게 도움이 될것이다.
 
 ---
 
-## 3. <span style="background-color:lightsteelblue">Java Collcetions FrameWork</span> 
+## <span style="background-color:#028C6A; color:white">Java Collcetions FrameWork</span> 
 
 <strong>Java Collections</strong>
 
@@ -163,7 +163,7 @@ Collection을 구현한 클래스 및 인터페이스들은 모두 java.util 패
 
 
 
-<span style="background-color:lightgreen">__Iterable__</span>
+<span style="background-color:#7BC5AE; color:white"><strong>Iterable</strong></span>
 
 Collection Interface 상위에 Iterable은 무엇일까?
 
@@ -193,9 +193,9 @@ Maps can be *viewed* as Collections (of keys, values, or pairs), and this fact i
 
 ---
 
-## 4. <span style="background-color:lightsteelblue">List</span> 
+## <span style="background-color:#028C6A; color:white">List</span> 
 
-<span style="background-color:lightgreen">List Interface</span>
+<span style="background-color:#7BC5AE; color:white"><strong>List Interface</strong></span>
 
 대표적인 선형 자료구조로 주로 순서가 있는 데이터를 목록으로 이용할 수 있도록 만들어진 인터페이스이다.
 
@@ -209,13 +209,13 @@ int[] arr = new int[10];는 제한적인 10공간 외에는 더 이상 사용하
 
 
 
-<span style="background-color:lightgreen">List Interface Operations</span>
+<span style="background-color:#7BC5AE; color:white"><strong>List Interface Operations</strong></span>
 
 <img src="https://github.com/hyunwlee-dev/TIL/blob/57d42aba0af328a9df4e5741619a8f2ad3ec2a4c/images/dataStructure/listInterface.png?raw=true" style="zoom:50%;" />
 
 
 
-<span style="background-color:lightgreen">List Interface를 구현하는 클래스</span>
+<span style="background-color:#7BC5AE; color:white"><strong>List Interface를 구현하는 클래스</strong></span>
 
 1. ArrayList
 2. LinkedList
@@ -262,7 +262,7 @@ Vector클래스를 상속받고 있고, 모두 Vector에 있는 메소드를 이
 
 ---
 
-## 5. <span style="background-color:lightsteelblue">Queue</span> 
+## <span style="background-color:#028C6A; color:white">Queue</span> 
 
 선형 자료구조로 주로 순서가 있는 데이터를 기반으로 FIFO를 위해 만들어진 인터페이스이다.
 
@@ -272,13 +272,13 @@ Queue를 상속하고 있는 Deque이라는 Interface도 있다.
 
 
 
-<span style="background-color:lightgreen"><strong>Queue/Deque Interface Operations</strong></span>
+<span style="background-color:#7BC5AE; color:white"><strong>Queue/Deque Interface Operations</strong></span>
 
 <img src="https://github.com/hyunwlee-dev/TIL/blob/f5830abf135db003fb5e2b4abd254cd08b761660/images/dataStructure/queueInterface.png?raw=true" style="zoom:45%;" />
 
 
 
-<span style="background-color:lightgreen"><strong>Queue/Deque Interface를 구현하는 클래스</strong></span>
+<span style="background-color:#7BC5AE; color:white"><strong>Queue/Deque Interface를 구현하는 클래스</strong></span>
 
 1. LinkedList
 2. ArrayDeque
@@ -318,7 +318,7 @@ LinkedList는 List를 구현하기도 하지만, Deque도 구현한다. 그리�
 
 ---
 
-## 6. <span style="background-color:lightsteelblue">Set</span>
+## <span style="background-color:#028C6A; color:white">Set</span>
 
 1. 데이터를 중복해서 저장할 수 없음
 2. 입력 순서대로의 저장 순서를 보장하지 않는다.
@@ -343,13 +343,13 @@ Queue계열 또한 PriorityQueue를 제외하고는 기본적으로 입력한 �
 
 그리고 Queue와 유사하게 Set을 상속받고 있는 SortedSet Interface도 있다.
 
-<span style="background-color:lightgreen"><strong>Set Interface Operation</strong></span>
+<span style="background-color:#7BC5AE; color:white"><strong>Set Interface Operation</strong></span>
 
 <img src="https://github.com/hyunwlee-dev/TIL/blob/bb294321373aeab6aea7b6f78386c1f5dd1a2861/images/dataStructure/setInterface.png?raw=true" style="zoom:45%;" />
 
 
 
-<span style="background-color:lightgreen"><strong>Set Interface를 구현하는 클래스</strong></span>
+<span style="background-color:#7BC5AE; color:white"><strong>Set Interface를 구현하는 클래스</strong></span>
 
 1. HashSet
 2. LinkedHashSet
@@ -393,7 +393,7 @@ Set Interface를 상속받은 <strong>SortedSet Interface</strong>를 구현하�
 
 ---
 
-## 7. <span style="background-color:lightsteelblue">적절한 자료구조 사용</span>
+## <span style="background-color:#028C6A; color:white">적절한 자료구조 사용</span>
 
 
 
@@ -423,7 +423,7 @@ Set Interface를 상속받은 <strong>SortedSet Interface</strong>를 구현하�
 
 ---
 
-<strong>Reference</strong>
+<span style="background-color:#028C6A; color:white"><strong>Reference</strong></span>
 
 [블로그 st-lab](https://st-lab.tistory.com/142)
 
