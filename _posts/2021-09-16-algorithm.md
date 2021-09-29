@@ -4,25 +4,23 @@ title: "TIL 백준 중급 알고리즘"
 author: "hyunwlee"
 ---
 
-## 1. BOJ 10282 해킹
+## <span style="background-color:#1D6A96; color:white">BOJ 10282 해킹</span>
 
-> Category
+<span style="background-color:#85B8CB; color:white"><strong> Category </strong></span>
 
 백준, [해킹](https://www.acmicpc.net/problem/10282), 다익스트라 알고리즘, 골드5
 
 <img src="https://github.com/hyunwlee-dev/TIL/blob/8db94c0013a4d98cbc0348e10ef6a0b494bfafb9/images/boj_hacking.png?raw=true" style="zoom:50%;"/>  
 
-
-
-> 시간복잡도
+<span style="background-color:#85B8CB; color:white"><strong> 시간복잡도 </strong></span>
 
 다익스트라 시간복잡도: O(|M||log|N|)
 
-> 풀이
+<span style="background-color:#85B8CB; color:white"><strong> 풀이 </strong></span>
 
 다익스트라 문제이며, 주의할 점으로는 들어오는 input값 a, b에서 `a가 b를 의존하는 경우 b가 감염되면 a도 감염된다.` 라는 글을 보고 인접리스트에 from과 to를 바꿔서 넣어줘야 한다.
 
-```java
+```
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -104,3 +102,4 @@ public class 해킹 {
     }
 }
 ```
+
