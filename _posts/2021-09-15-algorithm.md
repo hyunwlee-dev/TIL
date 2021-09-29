@@ -14,7 +14,7 @@ author: "hyunwlee"
 
 <strong>Priority Queue는 숫자 뿐만 아니라 객체를 저장할 수 있는데 그럴 경우 각 객체의 크기를 비교할 수 있는 방법을 제공해야 한다.</strong>
 
-> Priority Queue 예제 <strong>(숫자)</strong>
+<span style="background-color:#7BC5AE; color:white"><strong>  Priority Queue 예제 (숫자)</strong></span>
 
 ```
 import java.util.PriorityQueue;
@@ -40,7 +40,7 @@ Integer와 같은 <strong>Number의 자손들은 자체적으로 숫자를 비�
 
 
 
-> Prioirty Queue 예제 <strong>(객체의 크기를 비교할 수 있는 방법을 제공 X)</strong>
+<span style="background-color:#7BC5AE; color:white"><strong> Prioirty Queue 예제 (객체의 크기를 비교할 수 있는 방법을 제공 X) </strong></span>
 
 ```
 import java.util.PriorityQueue;
@@ -126,7 +126,7 @@ private static <T> void siftUpComparable(int k, T x, Object[] es) {
 
 
 
-> Prioirty Queue 예제 <strong>(객체의 크기를 비교할 수 있는 방법을 제공 O)</strong>
+<span style="background-color:#7BC5AE; color:white"><strong> Prioirty Queue 예제 (객체의 크기를 비교할 수 있는 방법을 제공 O) </strong></span>
 
 ```
 import java.util.PriorityQueue;
