@@ -105,12 +105,12 @@ private void siftUp(int k, E x) {
 private static <T> void siftUpComparable(int k, T x, Object[] es) {
 	Comparable<? super T> key = (Comparable<? super T>) x; // ⭐️UpCasting 실패
 	while (k > 0) {
-	int parent = (k - 1) >>> 1;
-	Object e = es[parent];
-	if (key.compareTo((T) e) >= 0)
-		break;
-	es[k] = e;
-	k = parent;
+		int parent = (k - 1) >>> 1;
+		Object e = es[parent];
+		if (key.compareTo((T) e) >= 0)
+			break;
+		es[k] = e;
+		k = parent;
 	}
 	es[k] = key;
 }
