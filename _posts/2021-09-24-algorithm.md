@@ -4,22 +4,21 @@ title: "TIL 백준 중급 알고리즘, 42seoul(push_swap)"
 author: "hyunwlee"
 ---
 
-## 1. <span style="background-color:lightgrey">BOJ 18116 로봇 조립</span>
+## <span style="background-color:#1D6A96; color:white">BOJ 18116 로봇 조립</span>
 
-> Category
+<span style="background-color:#85B8CB; color:white"><strong> Category</strong></span>
 
 백준, [로봇 조립](https://www.acmicpc.net/problem/18116), 그래프
 
 <img src="https://github.com/hyunwlee-dev/TIL/blob/f7238cc11efd5091ab6801cac78ff82c9f255651/images/boj_robotAssembly.png?raw=true" style="zoom:50%;" />  
 
-
-
-> 시간복잡도
+<span style="background-color:#85B8CB; color:white"><strong>시간복잡도</strong></span>
 
 ...
 
 
-> 풀이
+
+<span style="background-color:#85B8CB; color:white"><strong>풀이</strong></span>
 
 I: 부품 2개가 하나의 로봇에 쓰이는 부품이라는 것을 알려줄때, 2개 부품을 Union을 해준다.
 
@@ -105,36 +104,40 @@ public class 로봇 조립 {
 
 ---
 
-## 2. <span style="background-color:lightgrey">42seoul(push_swap)</span>
+## <span style="background-color:#E81E25; color:white">42seoul(push_swap)</span>
 
-#### 동료 학습 방법: mchun
+#### <span style="background-color:#FE7773; color:white">동료 학습 방법</span>
 
-#### 학습 목표: 최적화
+mchun (동료 학습)
 
-5. <strong>Middle version</strong>
+#### <span style="background-color:#FE7773; color:white">학습 목표</span>
 
-ARG="<span style="color:blue">100 random</span>"; ./push_swap $ARG | ./checker_Mac $ARG 
+최적화
 
-<span style="color:red">result line: </span>
+5. <span style="background-color:#FFC2C3; color:white"><strong>Middle version</strong></span>
 
-- [ ] 700 미만: 5점
+- [ ] ARG="<span style="color:blue">100 random</span>"; ./push_swap $ARG | ./checker_Mac $ARG 
 
-- [x] 900 미만: 4점
-- [ ] 1100 미만: 3점
-- [ ] 1300 미만: 2점
-- [ ] 1500 미만: 1점
+  <span style="color:red">result line: </span>
 
-6. <strong>Advannced version</strong>
+  - [ ] 700 미만: 5점
 
-ARG="<span style="color:blue">500 random</span>"; ./push_swap $ARG | ./checker_Mac $ARG 
+  - [x] 900 미만: 4점
+  - [ ] 1100 미만: 3점
+  - [ ] 1300 미만: 2점
+  - [ ] 1500 미만: 1점
 
-<span style="color:red">result line: </span>
+6. <span style="background-color:#FFC2C3; color:white"><strong>Advance version</strong></span>
 
-- [x] 5500 미만: 5점
-- [ ] 7000 미만: 4점
-- [ ] 8500 미만: 3점
-- [ ] 10000 미만: 2점
-- [ ] 11500 미만: 1점
+- [ ] ARG="<span style="color:blue">500 random</span>"; ./push_swap $ARG | ./checker_Mac $ARG 
+
+  <span style="color:red">result line: </span>
+
+  - [x] 5500 미만: 5점
+  - [ ] 7000 미만: 4점
+  - [ ] 8500 미만: 3점
+  - [ ] 10000 미만: 2점
+  - [ ] 11500 미만: 1점
 
 ---
 
