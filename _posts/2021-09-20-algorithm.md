@@ -4,13 +4,17 @@ title: "42seoul(push_swap)"
 author: "hyunwlee"
 ---
 
-## 1. <span style="background-color:lightgrey">42seoul(push_swap)</span>
+## <span style="background-color:#E81E25; color:white">42seoul(push_swap)</span>
 
-#### 동료 학습 방법: mchun
+#### <span style="background-color:#FE7773; color:white">동료 학습 방법</span>
 
-#### 학습 목표: 최적화
+mchun
 
-5. <strong>Middle version</strong>
+#### <span style="background-color:#FE7773; color:white">학습 목표</span>
+
+최적화
+
+5. <span style="background-color:#FFC2C3; color:white"><strong>Middle version</strong></span>
 
 ARG="<span style="color:blue">100 random</span>"; ./push_swap $ARG | ./checker_Mac $ARG 
 
@@ -23,7 +27,7 @@ ARG="<span style="color:blue">100 random</span>"; ./push_swap $ARG | ./checker_M
 - [x] 1300 미만: 2점
 - [ ] 1500 미만: 1점
 
-6. <strong>Advannced version</strong>
+6. <strong><span style="background-color:#FFC2C3; color:white"><strong>Advance version</strong></span></strong>
 
 ARG="<span style="color:blue">500 random</span>"; ./push_swap $ARG | ./checker_Mac $ARG 
 

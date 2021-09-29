@@ -136,7 +136,7 @@ public class 보석 도둑
   - [ ] 1300 미만: 2점
   - [ ] 1500 미만: 1점
 
-6. ~~<span style="background-color:#FFC2C3; color:white"><strong>Advance version</strong></span>~~
+6. <span style="background-color:#FFC2C3; color:white"><strong>Advance version</strong></span>
 
 - [ ] ARG="<span style="color:blue">500 random</span>"; ./push_swap $ARG | ./checker_Mac $ARG 
 
