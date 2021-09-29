@@ -223,9 +223,9 @@ Error Management에 적합하기 위해서 헤더에 validation구조체를 선�
 ```
 typedef struct s_validation
 {
-    int is_sorted;			// 정렬되어 있는 상태인가?
+    int is_sorted;	// 정렬되어 있는 상태인가?
     int is_duplicated;	// stack들어 있는 원소가 중복인 상태인가?
-    // int is_digit;		// 원소가 정수인가?
+    // int is_digit;	// 원소가 정수인가?
     // int is_integer;	// 원소 범위가 Integer인가?
 }              t_validation;
 ```
