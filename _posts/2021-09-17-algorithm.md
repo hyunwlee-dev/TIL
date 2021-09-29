@@ -4,9 +4,9 @@ title: "TIL 백준 중급 알고리즘, 42seoul(push_swap)"
 author: "hyunwlee"
 ---
 
-## 1. BOJ 1339 단어 수학
+## <span style="background-color:#1D6A96; color:white">BOJ 1339 단어 수학</span>
 
-> Category
+<span style="background-color:#85B8CB; color:white"><strong> Category </strong></span>
 
 백준, [단어 수학](https://www.acmicpc.net/problem/1339), 그리디 알고리즘, 골드4
 
@@ -14,12 +14,14 @@ author: "hyunwlee"
 
 
 
-> 시간복잡도
+<span style="background-color:#85B8CB; color:white"><strong> 시간복잡도 </strong></span>
 
 1. BruteForce: O(N(단어의 개수 1 <= N <= 10)! * M(알파벳 개수 1 <=M <= 26)) => 통과는 하지만 효율성↓  
-2. <span style="color:red">Greedy: O(N ^ 2)</span>
+2. <strong>Greedy: O(N ^ 2)</strong>
 
-> 풀이
+
+
+<span style="background-color:#85B8CB; color:white"><strong> 풀이 </strong></span>
 
 BruteFoce  
 
@@ -27,7 +29,7 @@ BruteFoce
 2. HashMap - 알파벳의 value를 매핑
 3. BackTracking을 이용한 순열(Permutation)을 이용하여 각 알파벳의 모든 경우 수를 구한 후 최대로 큰 값을 출력
 
-```java
+```
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -102,7 +104,7 @@ Greedy
 
 input으로 들어오는 단어의 알파벳을 각 자리 수의 위치마다 1로 나타내어 Mapping후 최대힙 PriorityQueue에 넣고 꺼내어 Mapping만 해주면 간단하게 해결이 되는 문제다.
 
-예외를 있으리라 생각되어 안될 것 같았지만 <span style="color:red">들어오는 단어가 10개 이하이기 때문에 이 방법이 가능하다.</span>
+예외를 있으리라 생각되어 안될 것 같았지만 <strong>들어오는 단어가 10개 이하이기 때문에 이 방법이 가능하다.</strong>
 
 만약 10개 이하 조건이 없다면, 단어가 11개 들어올 수 있는 상황이 된다면, 
 
@@ -121,7 +123,7 @@ A (2)
 이러한 경우에는 A의 grade > C의 grade이 이득게 되지만, 위에서 말했다시피 단어 갯수는 최대 10개이기 때문에 이러한 예외를 신경쓰지 않아 된다.
 
 
-```java
+```
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -192,17 +194,21 @@ public class 단어 수학 {
 
 ---
 
-## 2. 42seoul(push_swap)
+## <span style="background-color:#E81E25; color:white">42seoul(push_swap)</span>
 
-#### 동료 학습 방법: 개인
+#### <span style="background-color:#FE7773; color:white">동료 학습 방법</span>
 
-#### 학습 목표: 예외처리
+개인
 
-1. <strong>Error management</strong>
+#### <span style="background-color:#FE7773; color:white">학습 목표</span>
+
+예외처리
+
+1. <span style="background-color:#FFC2C3; color:white"><strong>Error management</strong></span>
 
 - [x] list of integers 중 한 원소가 integer가 아닐 경우 <span style="color:red">result: Error</span>
 
-2. <strong>Identity test</strong>
+2. <span style="background-color:#FFC2C3; color:white"><strong>Identity test</strong></span>
 
 - [x] ./push_swap <span style="color:blue">42</span> <span style="color:red">result:</span>
 - [ ] ./push_swap <span style="color:blue">0 1 2 3</span> <span style="color:red">result: </span>
@@ -214,14 +220,14 @@ Error Management에 적합하기 위해서 헤더에 validation구조체를 선�
 
 - is_digit과 is_integer는 input이 들어오는대로 검출 할 수있어 따로 check_validation함수로 빼놓기로 결정했다.
 
-```c
-typedef struct  s_validation
+```
+typedef struct s_validation
 {
     int is_sorted;			// 정렬되어 있는 상태인가?
     int is_duplicated;	// stack들어 있는 원소가 중복인 상태인가?
-    // int is_digit;				// 원소가 정수인가?
-    // int is_integer;			// 원소 범위가 Integer인가?
-}               t_validation;
+    // int is_digit;		// 원소가 정수인가?
+    // int is_integer;	// 원소 범위가 Integer인가?
+}              t_validation;
 ```
 
 
