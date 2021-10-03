@@ -41,33 +41,13 @@ ARG="<span style="color:blue">500 random</span>"; ./push_swap $ARG | ./checker_M
 
 ---
 
-정렬은 되고 있으나 정렬에 필요한 명령어 수가 너무 많다. 따라서 명령어를 바로 출력하는 것이 아니라 문자열을 linkedList로 구현해 놓았던 deque에 삽입하기전 불필요한 명령어들을 없애기로 아이디어를 냈다.
+## <span style="background-color:#E81E25; color:white">명령어 수를 줄이기 위한 최적화 아이디어</span>
 
-```
-void	optimize_deque(deque, input_s)
-{
-	if (deque->size != 0)
-		if (strncmp(peek(), "sa", 4) == 0 그리고 strncmp(input_s, "sa") == 0) // 불필요한 경우 peek를 poll()하고 들어온 인자값을 삽입하지 않음
-		else if (sa  -> sa)
-		else if (sb  -> sb)
-		else if (ss  -> ss)
-		else if (pa  -> pb)
-		else if (pb  -> pa)
-		else if (ra  -> rb)
-		else if (rb  -> ra)
-		else if (ra  -> rra)
-		else if (rra -> ra)
-		else if (rb  -> rrb)
-		else if (rrb -> rb)
-		else if (rr -> rr)
-		else if (rrr -> rrr)
-		else
-			offer();	// 불필요한 명령어가 아닐 경우 offer();
-		poll();
-	else
-		offer();	// deque->size가 0이면 peek()할것이 없으므로 offer();
-}
-```
+<span style="background-color:#FE7773; color:white"><strong>명령어 수를 줄이기 위한 최적화 아이디어 [1]</strong></span>
+
+정렬은 되고 있으나 정렬에 필요한 명령어 수가 너무 많다. 따라서 명령어를 바로 출력하는 것이 아니라 문자열을 linkedList로 구현해 놓았던 deque에 삽입하기전 <strong>불필요한 명령어들을 없애기</strong>로 아이디어를 냈다.
+
+<script src="https://gist.github.com/hyunwlee-dev/8bcf0e7a88484de5d3c5cdef6b08cd01.js"></script>
 
 이에 추가적으로 필요한 함수들
 
@@ -81,8 +61,23 @@ void        clear_s(t_deque_s *deque);
 void        print_all_s(t_deque_s *deque);
 ```
 
-이렇게 코딩을 마쳤다.
+코딩을 마쳤다.  
 
-하지만 `./push_swap $ARG | wc -l` 한 결과  아직도 명령어를 더 줄여야 했다.
+Node 구조체에 필요한 data의 타입이 달라져 (int -> char *) 기능적으로 중복인 함수들을 만들게 되었다. 
 
-답답한 마음에 동료 mchun에게 조언을 구하고 내 로직을 말했더니 pivot을 "적절히" 선택하지 않아서 그런것 같다고 말해주었다. 내일은 pivot 2곳을 linkedList에서 1/3, 2/3 지점으로 정할 것이 아니라 어떻게 설정 할것인지 깊게 생각해볼 것이다.
+내 코드 되게 별로다. 
+
+자바였으면 제네릭스를 사용해서 들어오는 요소의 데이터 타입을 이용하여 짰을테고..
+
+사실 c언어의 경우 (void *)주소를 이용하여 다양한 데이터 타입을 받도록 하는게 맞지만,, 처음에 ADT와 DS를 설계를 안하고 무지성으로 짜게 되어 유지보수하는데에 더 시간이 들 것같아 기능적으로 중복적인 함수를 만들기로 결정하였다. 반성한다..
+
+
+
+그럼 결과는 이제 잘 나오나?
+
+아니다. 불필요한 명령어를 줄여도 cutLine에 한 참 부족했다.
+
+<span style="background-color:#FE7773; color:white"><strong>명령어 수를 줄이기 위한 최적화 아이디어 [2]</strong></span>
+
+답답한 마음에 동료 mchun에게 조언을 구하고 내 로직을 말했더니 <strong>pivot을 "적절히" 선택</strong>하지 않아서 그런것 같다고 말해주었다. 내일은 pivot 2곳을 linkedList에서 1/3, 2/3 지점으로 정할 것이 아니라 어떻게 설정 할것인지 깊게 생각해볼 것이다.
+
