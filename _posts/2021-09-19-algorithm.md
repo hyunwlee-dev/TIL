@@ -24,194 +24,30 @@ author: "hyunwlee"
 
 <strong>처음풀이</strong>는 Union-find라는 개념을 모른채 그래프 문제이므로 탐색을 돌려 분야별로 영역 표시를 해주었다. (boj 섬의 개수 인강을 들었을때 처럼)
 
-
-```
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.*;
-
-public class 거짓말 {
-    static int[] dist;
-    static boolean[] check;
-    static List<Integer>[] list; // 인접 리스트
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        int n = Integer.parseInt(st.nextToken());
-        int m = Integer.parseInt(st.nextToken());
-        check = new boolean[n + 1];
-        dist = new int[n + 1];
-        list = new ArrayList[n + 1];
-        List<Integer>[] partyList = new ArrayList[m];
-        for (int i = 0; i < m; i++)
-            partyList[i] = new ArrayList<>();
-        for (int i = 0; i < n + 1; i++)
-            list[i] = new ArrayList<>();
-        List<Integer> liarList = new ArrayList<>();
-        st = new StringTokenizer(br.readLine());
-        int liarNum = Integer.parseInt(st.nextToken());
-        for (int i = 0; i < liarNum; i++)
-            liarList.add(Integer.parseInt(st.nextToken()));
-        for (int i = 0; i < m; i++)
-        {
-            st = new StringTokenizer(br.readLine());
-            int participant = Integer.parseInt(st.nextToken());
-            for (int j = 0; j < participant; j++)
-                partyList[i].add(Integer.parseInt(st.nextToken()));
-        }
-        insertElementsToAdjacentList(partyList);
-        int marking = 0;
-        for (int liar : liarList)
-        {
-            if (dist[liar] == 0)
-                BFS(liar, ++marking);
-        }
-
-        int answer = 0;
-        for (List<Integer> party : partyList)
-        {
-            boolean canLie = true;
-            for (int p : party)
-                if (dist[p] != 0)
-                {
-                    canLie = false;
-                    break;
-                }
-            if (canLie)
-                ++answer;
-        }
-        System.out.println(answer);
-    }
-    public static void BFS(int start, int marking)
-    {
-        Queue<Integer> queue = new LinkedList<>();
-        queue.offer(start);
-        dist[start] = marking;
-        while (!queue.isEmpty())
-        {
-            int temp = queue.poll();
-            for (int i : list[temp])
-            {
-                if (dist[i] != 0)
-                    continue;
-                queue.offer(i);
-                ++dist[i];
-            }
-        }
-    }
-
-    public static void insertElementsToAdjacentList(List<Integer>[] partyList)
-    {
-        for (int i = 0; i < partyList.length; i++)
-            for (int j = 0; j < partyList[i].size(); j++)
-                for (int l = 0; l < partyList[i].size(); l++)
-                    if (j != l)
-                        list[partyList[i].get(j)].add(partyList[i].get(l));
-    }
-}
-
-```
+<script src="https://gist.github.com/hyunwlee-dev/6e6914dc3ac4b19cc222de4910ccd307.js"></script>
 
 
 
 <strong>나중풀이</strong>는 시간 복잡도는 비슷하지만 여러 자료구조가 필요없는 Union-find를 공부하며 다시 풀어냈다.
 
+line(47 ~ 49)에서 이해 하는데 꽤나 걸렸다. 디버깅도 돌려보고 출력도 여러번 찍어보았다.
+
+<strong>[TC]</strong>
+
 ```
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.StringTokenizer;
-
-public class 거짓말
-{
-    static int[] parent;
-    static boolean[] knowPeople = new boolean[51];
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        int n = Integer.parseInt(st.nextToken());
-        int m = Integer.parseInt(st.nextToken());
-
-        // Union-Find 초기화
-        parent = new int[n + 1];
-        for (int i = 1; i < n + 1; i++)
-            parent[i] = i;
-
-        // 진실을 아는 사람 knowPeople
-        st = new StringTokenizer(br.readLine());
-        int knowPeopleNum = Integer.parseInt(st.nextToken());
-        for (int i = 0; i < knowPeopleNum; i++)
-            knowPeople[Integer.parseInt(st.nextToken())] = true;
-
-        // 파티 정보를 읽으면서 같은 파티에 있는 사람 Union
-        List<Integer>[] people = new ArrayList[m];
-        for (int i = 0; i < m; i++)
-            people[i] = new ArrayList<>();
-        int first = 0;
-        int second;
-        for (int i = 0; i < m; i++)
-        {
-            st = new StringTokenizer(br.readLine());
-            int peopleNum = Integer.parseInt(st.nextToken());
-            if (peopleNum > 0)
-            {
-                first = Integer.parseInt(st.nextToken());
-                people[i].add(first);
-            }
-            for (int j = 1; j < peopleNum; j++)
-            {
-                second = Integer.parseInt(st.nextToken());
-                people[i].add(second);
-                union(first, second);
-                first = second;
-            }
-        }
-
-        // 진실을 아는 사람들의 parent 는 같이 파티를 참여 했으므로 진실을 아는 사람들
-        for (int i = 1; i < knowPeople.length; i++)
-            if (knowPeople[i])
-                knowPeople[find(i)] = true;
-        int answer = 0;
-        int parent;
-        for (int i = 0; i < m; i++) {
-            if (people[i].size() > 0) {
-                parent = find(people[i].get(0));
-                if (!knowPeople[parent])
-                    ++answer;
-            }
-        }
-        // 거짓말 할 수 있는 파티 최대 수 출력
-        System.out.println(answer);
-    }
-
-    public static int find(int x)
-    {
-        if (parent[x] == x)
-            return (parent[x] = x);
-        else
-            return (find(parent[x]));
-    }
-
-    public static boolean union(int first, int second)
-    {
-        first = find(first);
-        second = find(second);
-
-        if (first != second)
-        {
-            if (first > second)             //  어떤 기준으로 Union(결합) 할껀데?
-                parent[first] = second;     //  ㄴ 연결되어 있다면 node가 작은걸로
-            else
-                parent[second] = first;
-            return (true);
-        }
-        return (false);
-    }
-}
+6 5
+1 6
+2 4 5
+2 1 2
+2 2 3
+2 3 4
+2 5 6
+// result : 0
 ```
+
+<strong>union(int first, int second) 함수</strong>를 통해 parent[Math.<strong>max</strong>(first, second)] = Math.<strong>min</strong>(first, second)  특징을 깊이 생각해보길 바란다.
+
+<script src="https://gist.github.com/hyunwlee-dev/d6adcd3e11d7b2d02961973d513f85dc.js"></script>
 
 아직 Union-Find가 어색하여 같은 유형의 많은 문제를 풀어보는 것이 좋을 듯 하다.
 
@@ -287,60 +123,6 @@ public class 거짓말
 
 java로 TC를 구하기 위해서 BackTracking을 이용하여 순열, 그리고 랜덤으로 순열 하나를 출력하는 프로그램
 
-```
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
-public class TEST
-{
-    static int[] arr;
-    static boolean[] check;
-    static int cnt = 0;
-    static List<String> list = new ArrayList<>();
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int n = Integer.parseInt(br.readLine());
-        arr = new int[n];
-        check = new boolean[n + 1];
-        Random r = new Random();
-        DFS(0, n);
-        System.out.println(list.get(r.nextInt(factorial(n))));
-    }
-
-    public static void DFS(int depth, int n)
-    {
-        if (depth == n)
-        {
-            ++cnt;
-            StringBuilder sb = new StringBuilder();
-            for (int i : arr)
-                sb.append(i + " ");
-            list.add(sb.toString());
-            return;
-        }
-
-        for (int i = 1; i <= n; i++)
-        {
-            if (check[i])
-                continue;
-            check[i] = true;
-            arr[depth] = i;
-            DFS(depth + 1, n);
-            check[i] = false;
-        }
-    }
-
-    public static int factorial(int n)
-    {
-        if (n == 1)
-            return (1);
-        return (n * factorial(n - 1));
-    }
-}
-```
+<script src="https://gist.github.com/hyunwlee-dev/fdd9d25890fe0bdb8189c32c30c3bc21.js"></script>
 
 - checker_Mac 쉘 책점 프로그램 만들기 추천
