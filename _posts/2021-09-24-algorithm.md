@@ -141,7 +141,7 @@ mchun (동료 학습)
 
 ---
 
-push_swap을 해결하였다.
+<span style="background-color:#FE7773; color:white"><strong>명령어 수를 줄이기 위한 최적화 아이디어 [2]</strong></span>
 
 subject_push_swap.pdf 문제를 읽어보면 <span style="color:red">여러 랜덤의 100개가 섞여있는 수들 </span> 또는 <span style="color:red">여러 랜덤의 500개의 섞여있는 수들</span> 이 입력으로 들어왔을 때 result line이 안정적으로 <span style="color:red">700개 미만</span>으로 결과를 추리길 원한다는 것을 보자마자 코드에서 문제점이 무엇인지 빨리 알아 차렸어야 했다.
 
@@ -151,11 +151,11 @@ pivot을 최적인 곳을 잡아주지 않았을 때는 랜덤으로 들어오�
 
 
 
-최적의 pivot위치를 미리 알고 잡아준다면? 명령어 수를 최적으로 맞출 수 있을 뿐더러 결과 범위가 들쑥날쑥하지도 않는다.
+<strong>최적의 pivot위치를 미리 알고 잡아준다면?</strong>
+
+명령어 수를 최적으로 맞출 수 있을 뿐더러 결과 범위가 들쑥날쑥하지도 않는다.
 
 
-
-그림 [어떻게 해결 했는지]
 
 두 pivot의 위치를 찾기위해 분할된 크기만큼 malloc을 사용해서 원소값들을 모두 copy시키고 정렬시킨 다음 1/3, 2/3지점의 원소들을 pivot으로 삼았다.
 
