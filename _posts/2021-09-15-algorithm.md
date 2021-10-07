@@ -178,7 +178,7 @@ public class Main {
 
 백준, [최소비용 구하기](https://www.acmicpc.net/problem/1916), 다익스트라 알고리즘, 골드5
 
-<img src="https://github.com/hyunwlee-dev/TIL/blob/a247fc9b5dcbff8990ac51d9d59cde5474bd016e/images/findMinimumCost.png?raw=true" style="zoom:50%;" />  
+<img src="https://github.com/hyunwlee-dev/TIL/blob/a247fc9b5dcbff8990ac51d9d59cde5474bd016e/images/findMinimumCost.png?raw=true" style="zoom:50%;"/>  
 
 
 
